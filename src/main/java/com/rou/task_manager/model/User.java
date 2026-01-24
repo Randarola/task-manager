@@ -9,13 +9,13 @@ public class User {
     private String password;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String email;
 
     public User() {
     }
 
-    public User(int id, String username, String password, String email) {
+    public User(Integer id, String username, String password, String email) {
         this.username = username;
         this.id = id;
         this.password = password;
