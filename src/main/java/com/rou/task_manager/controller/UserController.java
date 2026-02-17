@@ -2,6 +2,7 @@ package com.rou.task_manager.controller;
 
 import com.rou.task_manager.model.User;
 import com.rou.task_manager.repository.UserRepository;
+import com.rou.task_manager.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -11,17 +12,17 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    private final UserRepository userRepository;
-    public UserController (UserRepository userRepository){
-        this.userRepository = userRepository;
+    private final UserService userService;
+    public UserController (UserService userService){
+        this.userService = userService;
     }
 
     @GetMapping
     public List <User> getUsers(){
-        return userRepository.findAll();
+        return userService.getUsers();
     }
     @PostMapping
     public User addUser(@RequestBody User user){
-        return userRepository.save(user);
+        return userService.addUser(user);
     }
 }
