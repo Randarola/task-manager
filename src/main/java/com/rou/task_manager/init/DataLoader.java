@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class DataLoader implements CommandLineRunner {
     private final PasswordEncoder passwordEncoder;
@@ -19,6 +21,7 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         User admin = new User("admin","admin@gmail.com",passwordEncoder.encode("admin123"), Role.ADMIN);
-        userRepository.save(admin);
+        User user = new User("user", "user@gmail.com", passwordEncoder.encode("user123"), Role.USER);
+        userRepository.saveAll(List.of(admin, user));
     }
 }
