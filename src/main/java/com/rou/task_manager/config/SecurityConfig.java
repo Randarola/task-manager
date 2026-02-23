@@ -21,7 +21,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
                 .requestMatchers("/users/**").authenticated()
                 .anyRequest().permitAll()
-        ).formLogin(form ->form.permitAll());
+        ).formLogin(formLogin -> formLogin.loginPage("/login").permitAll());
         return http.build();
     }
 }
