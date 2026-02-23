@@ -22,6 +22,13 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    public User(String username, String email, String password, Role role) {
+        this.role = role;
+        this.email = email;
+        this.password = password;
+        this.username = username;
+    }
+
     public User() {
     }
 
@@ -70,6 +77,3 @@ public class User implements UserDetails {
     }
 }
 
-enum Role{
-    USER, ADMIN
-}
