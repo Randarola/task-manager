@@ -20,8 +20,10 @@ public class DataLoader implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
-        User admin = new User("admin","admin@gmail.com",passwordEncoder.encode("admin123"), Role.ADMIN);
-        User user = new User("user", "user@gmail.com", passwordEncoder.encode("user123"), Role.USER);
-        userRepository.saveAll(List.of(admin, user));
+        if (userRepository.count() == 0) {
+            User admin = new User("admin", "admin@gmail.com", passwordEncoder.encode("admin123"), Role.ADMIN);
+            User user = new User("user", "user@gmail.com", passwordEncoder.encode("user123"), Role.USER);
+            userRepository.saveAll(List.of(admin, user));
+        }
     }
 }
