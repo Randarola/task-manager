@@ -8,9 +8,9 @@
 
 <h1>Strona logowania</h1>
 
-<form method="post" action ="/login">
+<form method="post" th:action ="@{/login}">
     <div>
-        <label>Email:</label>
+        <label>Nazwa użytkownika:</label>
         <input type="text" name="username" required/>
     </div>
     <div>
