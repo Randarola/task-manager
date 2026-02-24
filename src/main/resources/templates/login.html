@@ -24,6 +24,9 @@
             <button type="submit">Zaloguj się</button>
         </div>
     </form>
+    <div th:if="${param.error}" class="error-message">
+        Niepoprawny login lub hasło, spróbuj ponownie
+    </div>
 </div>
 </body>
 </html>
