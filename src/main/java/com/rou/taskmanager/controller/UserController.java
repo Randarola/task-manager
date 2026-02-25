@@ -1,7 +1,7 @@
-package com.rou.task.manager.controller;
+package com.rou.taskmanager.controller;
 
-import com.rou.task.manager.model.User;
-import com.rou.task.manager.service.UserService;
+import com.rou.taskmanager.model.User;
+import com.rou.taskmanager.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

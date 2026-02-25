@@ -1,6 +1,6 @@
-package com.rou.task.manager.repository;
+package com.rou.taskmanager.repository;
 
-import com.rou.task.manager.model.User;
+import com.rou.taskmanager.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

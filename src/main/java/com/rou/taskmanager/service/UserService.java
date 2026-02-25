@@ -1,7 +1,7 @@
-package com.rou.task.manager.service;
+package com.rou.taskmanager.service;
 
-import com.rou.task.manager.model.User;
-import com.rou.task.manager.repository.UserRepository;
+import com.rou.taskmanager.model.User;
+import com.rou.taskmanager.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

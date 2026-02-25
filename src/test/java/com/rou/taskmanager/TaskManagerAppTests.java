@@ -1,4 +1,4 @@
-package com.rou.task.manager;
+package com.rou.taskmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

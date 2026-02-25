@@ -1,8 +1,8 @@
-package com.rou.task.manager.init;
+package com.rou.taskmanager.init;
 
-import com.rou.task.manager.model.Role;
-import com.rou.task.manager.model.User;
-import com.rou.task.manager.repository.UserRepository;
+import com.rou.taskmanager.model.Role;
+import com.rou.taskmanager.model.User;
+import com.rou.taskmanager.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;

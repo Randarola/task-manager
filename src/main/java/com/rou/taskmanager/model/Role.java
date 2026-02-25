@@ -1,4 +1,4 @@
-package com.rou.task.manager.model;
+package com.rou.taskmanager.model;
 
 public enum Role{
     USER, ADMIN
