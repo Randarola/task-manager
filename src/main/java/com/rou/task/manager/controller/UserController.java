@@ -1,11 +1,9 @@
-package com.rou.task_manager.controller;
+package com.rou.task.manager.controller;
 
-import com.rou.task_manager.model.User;
-import com.rou.task_manager.repository.UserRepository;
-import com.rou.task_manager.service.UserService;
+import com.rou.task.manager.model.User;
+import com.rou.task.manager.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

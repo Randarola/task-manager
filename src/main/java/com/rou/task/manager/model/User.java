@@ -1,4 +1,4 @@
-package com.rou.task_manager.model;
+package com.rou.task.manager.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

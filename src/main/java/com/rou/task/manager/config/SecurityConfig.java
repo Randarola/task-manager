@@ -1,4 +1,4 @@
-package com.rou.task_manager.config;
+package com.rou.task.manager.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

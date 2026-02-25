@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/styles.css}"/>
-    <title>Login</title>
+    <title>Sign in</title>
 </head>
 <body>
 
 <div class="login-container">
 
-    <h1>Strona logowania</h1>
+    <h1>Login page</h1>
 
     <form method="post" th:action ="@{/login}">
         <div class="form-group">
-            <label>Nazwa użytkownika:</label>
+            <label>Username:</label>
             <input type="text" name="username" required/>
         </div>
         <div class="form-group">
-            <label>Hasło:</label>
+            <label>Password:</label>
             <input type="password" name="password" required>
         </div>
         <div class="form-group">
-            <button type="submit">Zaloguj się</button>
-        </div>
+            <button type="submit">Log in</button>
+</div>
     </form>
     <div th:if="${param.error}" class="error-message">
-        Niepoprawny login lub hasło, spróbuj ponownie
+        Incorrect username or password, try again
     </div>
 </div>
 </body>

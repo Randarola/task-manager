@@ -1,12 +1,12 @@
-package com.rou.task_manager;
+package com.rou.task.manager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MenadzerZadanApplication {
+public class TaskManagerApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MenadzerZadanApplication.class, args);
+		SpringApplication.run(TaskManagerApp.class, args);
 	}
 }
