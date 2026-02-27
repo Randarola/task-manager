@@ -1,9 +1,6 @@
 package com.rou.taskmanager.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Task {
@@ -12,4 +9,18 @@ public class Task {
     private int id;
     private String title;
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public Task(){
+    }
+
+    public Task(String title, String description, User user){
+        this.title = title;
+        this.description = description;
+        this.user = user;
+    }
+
 }
