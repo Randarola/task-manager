@@ -24,5 +24,13 @@ public class TaskService{
         task.setUser(user);
         return taskRepository.save(task);
     }
-    
+
+    public void deleteTask(int taskId, User user){
+        Task task = taskRepository.findById(taskId).orElseThrow(()->new IllegalArgumentException("Task not found"));
+        if (!task.getUser().getUsername().equals(user.getUsername())){
+            throw new IllegalArgumentException("Task does not belong to the given user");
+        }
+        taskRepository.deleteById(taskId);
+    }
+
 }
