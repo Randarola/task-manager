@@ -4,9 +4,8 @@ import com.rou.taskmanager.model.Task;
 import com.rou.taskmanager.model.User;
 import com.rou.taskmanager.service.TaskService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +19,15 @@ public class TaskController {
     @GetMapping
     public List<Task> getTasksForUser(@AuthenticationPrincipal User user){
         return taskService.getTasksForUser(user);
+    }
+
+    @PostMapping
+    public Task addTask(@RequestBody Task task, @AuthenticationPrincipal User user){
+        return taskService.addTask(task, user);
+    }
+
+    @DeleteMapping("/{taskId")
+    public void deleteTask(@PathVariable int taskId, @AuthenticationPrincipal User user){
+        taskService.deleteTask(taskId, user);
     }
 }
