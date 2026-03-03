@@ -30,7 +30,7 @@ public class TaskService{
         if (!task.getUser().getUsername().equals(user.getUsername())){
             throw new IllegalArgumentException("Task does not belong to the given user");
         }
-        taskRepository.deleteById(taskId);
+        taskRepository.delete(task);
     }
 
 }
