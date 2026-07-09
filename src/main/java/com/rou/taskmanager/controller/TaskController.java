@@ -26,7 +26,7 @@ public class TaskController {
         return taskService.addTask(task, user);
     }
 
-    @DeleteMapping("/{taskId")
+    @DeleteMapping("/{taskId}")
     public void deleteTask(@PathVariable int taskId, @AuthenticationPrincipal User user){
         taskService.deleteTask(taskId, user);
     }
